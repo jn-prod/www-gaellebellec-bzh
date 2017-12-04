@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,400');
+
+/* ---------------------------
+START => THEME 
+----------------------------*/
+/* Space out content a bit */
+body {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+}
+nav {
+  font-weight: 400;
+}
+li {
+  display: inline;
+  list-style: none;
+}
+a:hover{
+  text-decoration: none;
+}
+h3{
+  font-size: 1.2em;
+}
+.spacer-xs-top{
+  margin-top: 5px;
+}
+.spacer-sm-top{
+  margin-top: 10px;
+}
+.spacer-md-top{
+  margin-top: 20px;
+}
+.spacer-lg-top{
+  margin-top: 40px;
+}
+.spacer-xs-bottom{
+  margin-bottom: 5px;
+}
+.spacer-sm-bottom{
+  margin-bottom: 10px;
+}
+.spacer-md-bottom{
+  margin-bottom: 20px;
+}
+.spacer-lg-bottom{
+  margin-bottom: 40px;
+}
+.text-white {
+  color: #FFF;
+}
+.text-underline{
+  text-decoration: underline;
+}
+
+/* ------- HEADER PAGE-------*/
+#header{
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)
+    ) , url(../img/header.jpg), no-repeat;
+  background-size: cover;
+  height: 85vh;
+  background-position: top-center;
+}
+#header h1 {
+  font-weight: 400;
+}
+
+/* ---------------------------
+END <= THEME 
+----------------------------*/
+
+/* ---------------------------
+START => BOOTSTRAP CUSTOM 
+----------------------------*/
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 3rem;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 1.5rem;
+  color: #777;
+  border-top: .05rem solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 48em) {
+  .container {
+    max-width: 46rem;
+  }
+}
+
+.container-fluid{
+  padding: 0 0 0 0 !important;
+}
+.container-narrow > hr {
+  margin: 2rem 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  margin:auto;
+  border-bottom: .05rem solid #e5e5e5;
+  background: none !important;
+  border: none !important;
+}
+.jumbotron .btn {
+  padding: .75rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 48em) {
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  .header nav {
+    font-size: 1.5em;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+/* ---------------------------
+END <= BOOTSTRAP CUSTOM 
+----------------------------*/
+@media (max-width: 576px) {
+  h1{
+    font-size: 1.5em !important;
+  }
+  h2{
+    font-size: 1em !important;
+  }
+  h3{
+    font-size: 0.9em !important;
+  }
+}
