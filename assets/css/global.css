@@ -76,6 +76,24 @@ h3{
 #calendrier {
   padding-bottom: 10px;
 }
+#izir {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 30px 30px 30px 30px;
+  background: #0fd5ff ;
+}
+
+#izir > p{
+  color: #FFF;
+  text-align: center;
+}
+
+#logo {
+  max-height: 50px;
+  width: auto;
+}
+
 /* ---------------------------
 END <= THEME 
 ----------------------------*/
