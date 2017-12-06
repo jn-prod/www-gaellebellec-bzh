@@ -51,6 +51,13 @@ h3{
 .text-underline{
   text-decoration: underline;
 }
+.hidde{
+  display: none;
+}
+
+.rank{
+  font-size : 2em;
+}
 
 /* ------- HEADER PAGE-------*/
 #header{
@@ -66,7 +73,9 @@ h3{
 #header h1 {
   font-weight: 400;
 }
-
+#calendrier {
+  padding-bottom: 10px;
+}
 /* ---------------------------
 END <= THEME 
 ----------------------------*/
