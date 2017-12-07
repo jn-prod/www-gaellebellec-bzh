@@ -11,15 +11,20 @@ body {
 nav {
   font-weight: 400;
 }
-li {
-  display: inline;
+li{
   list-style: none;
+}
+footer li {
+  display: inline;
 }
 a:hover{
   text-decoration: none;
 }
 h3{
   font-size: 1.2em;
+}
+h2{
+  text-align: center !important;
 }
 footer {
   margin-bottom: 70px;

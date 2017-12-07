@@ -53,24 +53,26 @@ $(function(){
 		$.each(data.values, function(key, val){
 			posts.push(
 			  '<div class="row post">'+
-	            '<div class="row">'+
-	              '<div class="col-sm-12">'+
-	              	'<h3 class="text-danger spacer-sm-top">' + this[0] + '</h3>'+
-				  '</div>'+
-				'</div>'+
-				'<div class="row">'+
-	              '<div class="col-sm-10">'+
-	                '<p>' + this[1] + '</p>'+
-	              '</div>'+
-	              '<div class="col-sm-2">'+
-	                '<span class="btn btn-danger read-more">Lire +</span>'+
-	              '</div>'+
-	            '</div>'+
-				'<div class="row hidde">'+
-	              '<div class="col-sm-12">'+
-	              	'<p>' + this[2] + '</p>'+
-	              '</div>'+
-	            '</div>'+
+			  	  '<div class="col-sm-12">'+
+		            '<div class="row">'+
+		              '<div class="col-sm-12">'+
+		              	'<h3 class="text-danger spacer-sm-top">' + this[0] + '</h3>'+
+					  '</div>'+
+					'</div>'+
+					'<div class="row">'+
+		              '<div class="col-sm-10">'+
+		                '<p>' + this[1] + '</p>'+
+		              '</div>'+
+		              '<div class="col-sm-2">'+
+		                '<span class="btn btn-danger read-more">Lire +</span>'+
+		              '</div>'+
+		            '</div>'+
+					'<div class="row hidde">'+
+		              '<div class="col-sm-12">'+
+		              	'<p>' + this[2] + '</p>'+
+		              '</div>'+
+		            '</div>'+
+		          '</div>'+ 
 	          '</div>'
 			)
 		})
