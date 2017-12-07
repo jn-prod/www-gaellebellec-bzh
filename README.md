@@ -31,6 +31,6 @@ Deploy changes
 
 ```sh
 $ git add .
-$ git commit -am "make it better"
+$ git commit -m "make it better"
 $ git push origin branch
 ```
