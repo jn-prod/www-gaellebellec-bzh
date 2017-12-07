@@ -2,7 +2,7 @@
 
 Gael Le Bellec is a two times duathlon wold champion. The project is his portfolio.
 
-## Simple HTML5 static website 
+### Simple HTML5 static website 
 
 The theme use "Bootstrap 4" dans "fontawesome" libraries  for faster design, no SEO objectives. 
 Structured in six section:
@@ -13,7 +13,24 @@ Structured in six section:
 - "Bio" : Simple text section with fontawesome header
 - "Parrainage" & "sponsors" : fotos display sections
 
-## Database with Google Sheets API
+### Database with Google Sheets API
 
 "Actus", "Calendrier" and "résulats" sections are update form a "Google Sheet" compose by a sheets by section.
 They are dynamically import with "jQuery" from "Google API" with some page's trigger.
+
+### Publication
+
+Clone folder
+
+```sh
+$ git clone https://github.com/jn-prod/GaelLeBellec.git GaelLeBellec
+$ cd GaelLeBellec
+```
+
+Deploy changes
+
+```sh
+$ git add .
+$ git commit -am "make it better"
+$ git push origin branch
+```
