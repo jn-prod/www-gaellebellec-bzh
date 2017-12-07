@@ -79,17 +79,14 @@ h3{
 #izir {
   position: fixed;
   bottom: 0;
-  right: 0;
-  padding: 30px 30px 30px 30px;
-  background: #0fd5ff ;
+  background: #0fd5ff;
+  height: auto;
+  padding: 5px 0 10px 0 !important;
 }
-
-#izir > p{
-  color: #FFF;
-  text-align: center;
+#izir p {
+    margin: 15px 0 0 0;
 }
-
-#logo {
+#logo-izir {
   max-height: 50px;
   width: auto;
 }
@@ -187,5 +184,15 @@ END <= BOOTSTRAP CUSTOM
   }
   h3{
     font-size: 0.9em !important;
+  }
+  #izir{
+    padding: 10px 0 10px 0 !important;
+  }
+  #logo-izir {
+  max-height: 30px;
+  width: auto;
+  }
+  #izir p{
+    margin: 5px;
   }
 }
