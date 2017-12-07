@@ -21,6 +21,9 @@ a:hover{
 h3{
   font-size: 1.2em;
 }
+footer {
+  margin-bottom: 70px;
+}
 .spacer-xs-top{
   margin-top: 5px;
 }
@@ -90,7 +93,6 @@ h3{
   max-height: 50px;
   width: auto;
 }
-
 /* ---------------------------
 END <= THEME 
 ----------------------------*/
