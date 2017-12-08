@@ -9,8 +9,8 @@ $(function(){
 	    '<div class="col-sm-12">'+
 		  '<div class="row">'+
             '<div class="col-sm-3 spacer-sm-top">'+
-              '<span class="d-block"><i class="fa fa-calendar" aria-hidden="true"></i> ' + date + '</span>'+
-              '<span class="d-block"><i class="fa fa-map-marker" aria-hidden="true"></i> ' + city + '</span>'+
+              '<span class="d-block"><i class="far fa-calendar" aria-hidden="true"></i> ' + date + '</span>'+
+              '<span class="d-block"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> ' + city + '</span>'+
             '</div>'+
             '<div class="col-sm-9">'+
               '<h3 class="text-danger spacer-sm-top">' + event + '</h3>'+
@@ -31,8 +31,8 @@ $(function(){
               '<span class="d-block rank"><i class="fa fa-trophy" aria-hidden="true"></i> #' + place + '</span>'+
             '</div>'+
             '<div class="col-sm-3 spacer-sm-top">'+
-              '<span class="d-block"><i class="fa fa-calendar" aria-hidden="true"></i> ' + date + '</span>'+
-              '<span class="d-block"><i class="fa fa-map-marker" aria-hidden="true"></i> ' + city + '</span>'+
+              '<span class="d-block"><i class="far fa-calendar" aria-hidden="true"></i> ' + date + '</span>'+
+              '<span class="d-block"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> ' + city + '</span>'+
             '</div>'+
             '<div class="col-sm-7">'+
               '<h3 class="text-danger spacer-sm-top"> ' + event + '</h3>'+
