@@ -4,7 +4,8 @@ Gael Le Bellec is a two times duathlon wold champion. The project is his portfol
 
 ### Simple HTML5 static website 
 
-The theme use "Bootstrap 4" dans "fontawesome" libraries  for faster design, no SEO objectives. 
+The theme use "Bootstrap 4" and "Fontawesome 5" libraries  for faster design, no SEO objectives no templating needs.
+ 
 Structured in six section:
 
 - "Actus" : a blog like section.
