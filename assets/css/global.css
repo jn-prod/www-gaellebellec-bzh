@@ -20,14 +20,26 @@ footer li {
 a:hover{
   text-decoration: none;
 }
-h3{
-  font-size: 1.2em;
-}
 h2{
   text-align: center !important;
 }
+h3{
+  font-size: 1.2em;
+}
+h4{
+  font-size : 0.9em;
+}
 footer {
   margin-bottom: 70px;
+}
+img{
+  height: 100px; 
+  width: auto; 
+  display: block;
+  margin: auto;
+}
+ul{
+  padding: 0 0 0 0 !important;
 }
 .spacer-xs-top{
   margin-top: 5px;
@@ -201,5 +213,8 @@ END <= BOOTSTRAP CUSTOM
   }
   #izir p{
     margin: 5px;
+  }
+  .text-xs-center{
+    text-align: center !important;
   }
 }
