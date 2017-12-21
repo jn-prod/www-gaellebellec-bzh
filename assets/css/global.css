@@ -85,7 +85,7 @@ ul{
     linear-gradient(
       rgba(0, 0, 0, 0.3), 
       rgba(0, 0, 0, 0.3)
-    ) , url(../img/header.jpg), no-repeat;
+    ) , url(../img/header_1.jpg), no-repeat;
   background-size: cover;
   height: 85vh;
   background-position: top-center;
@@ -137,6 +137,12 @@ START => BOOTSTRAP CUSTOM
   padding-top: 1.5rem;
   color: #777;
   border-top: .05rem solid #e5e5e5;
+}
+
+#bio-titre{
+  background: url(../img/liserets.png) repeat-x;
+  color:#FFF;
+  text-shadow: 1px #333;
 }
 
 /* Customize container */
