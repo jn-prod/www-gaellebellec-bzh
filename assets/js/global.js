@@ -77,7 +77,7 @@ $(function(){
 			)
 		})
 		posts.reverse()
-		$(posts[0]).appendTo("#posts")
+		$(posts[0]).appendTo("main")
 	})
 
 	/*Display all posts*/
