@@ -81,11 +81,6 @@ ul{
 
 /* ------- HEADER PAGE-------*/
 #header{
-  background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.3), 
-      rgba(0, 0, 0, 0.3)
-    ) , url(../img/header_1.jpg), no-repeat;
   background-size: cover;
   height: 85vh;
   background-position: top-center;
@@ -93,6 +88,31 @@ ul{
 #header h1 {
   font-weight: 400;
 }
+
+.header-img-1{
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)
+    ) , url(../img/header_1.jpg), no-repeat;
+}
+
+.header-img-2{
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)
+    ) , url(../img/header_2.jpg), no-repeat;
+}
+
+.header-img-3{
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3), 
+      rgba(0, 0, 0, 0.3)
+    ) , url(../img/header_3.jpg), no-repeat;
+}
+
 #calendrier {
   padding-bottom: 10px;
 }
@@ -106,9 +126,23 @@ ul{
 #izir p {
     margin: 15px 0 0 0;
 }
-#logo-izir {
+img#logo-izir {
   max-height: 50px;
   width: auto;
+  margin: 0 0 0 0 !important;
+}
+
+#newsletter-form{
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  height: 50%;
+  width: 50%;
+  background: #ecf0f1;
+}
+
+#newsletter-form .center{
+  margin: auto;
 }
 /* ---------------------------
 END <= THEME 
@@ -223,4 +257,12 @@ END <= BOOTSTRAP CUSTOM
   .text-xs-center{
     text-align: center !important;
   }
+  #newsletter-form{
+  position: fixed;
+  top: 15%;
+  left: 5%;
+  height: 50%;
+  width: 90%;
+  background: #ecf0f1;
+}
 }

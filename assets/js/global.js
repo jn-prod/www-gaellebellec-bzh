@@ -77,7 +77,7 @@ $(function(){
 			)
 		})
 		posts.reverse()
-		$(posts[0]).appendTo("main")
+		$(posts[0]).appendTo("#posts")
 	})
 
 	/*Display all posts*/
@@ -190,4 +190,67 @@ $(function(){
 			}
 		})
 	})
+
+	/*------
+	NEWSLETTER
+	------*/
+
+	$('.newsletter').on('click', ()=>{
+		var newsFrom = 
+			'<div id="newsletter-form" class="container-fluid d-flex text-center">'+
+				'<div class="center">'+
+				  '<div class="row justify-content-center">'+
+				    '<div class="col-6">'+
+				      '<p>Abonnez-vous maintenant et restez informé chaque mois de mes prochaines compétitions, mes derniers classements et surtout mon défrief du mois!</p>'+
+				      '<form action="https://docs.google.com/forms/d/e/1FAIpQLSe2TveY73jexT4zlbmeJxS9P1T-Xt2nj90DJ-mfm4G3WQddng/formResponse" target="_blank" method="POST" id="mG61Hd" class="form-inline">'+
+				        '<div class="input-group">'+
+				          '<input placeholder="votre@email.ici" type="email" class="form-control" jsname="YPqjbf" autocomplete="email" tabindex="0" aria-label="Votre adresse e-mail" name="emailAddress" value="" required="" dir="auto" data-initial-dir="auto" data-initial-value="">'+
+				        '</div>'+
+				        '<div class="input-group">'+
+				          '<input placeholder="votre prénom" type="text" class="form-control" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Prénom" aria-describedby="i.desc.1993717463 i.err.1993717463" name="entry.1462355575" value="" dir="auto" data-initial-dir="auto" data-initial-value="">'+
+				        '</div>'+
+				        '<input type="submit" class="btn btn-danger">'+
+				        '<input type="hidden" name="fvv" value="1">'+
+				        '<input type="hidden" name="draftResponse" value="[null,null,&quot;6858085896552653950&quot;]">'+
+				        '<input type="hidden" name="pageHistory" value="0">'+
+				        '<input type="hidden" name="fbzx" value="6858085896552653950">'+
+				      '</form>'+
+				    '</div>'+
+				  '</div>' +
+				  '<div class="row justify-content-center">'+
+				    '<div class="col-1">'+
+				      '<span id="close-newsletter" class="btn btn-outline-secondary">X</span> '+
+				    '</div>'+
+				  '</div> ' +           
+				'</div>'+
+			'</div>'
+
+		$(newsFrom).appendTo('body')
+	})
+
+	$(document).on('click', '#close-newsletter', ()=>{
+		$('#newsletter-form').remove()
+	})
+
+	/*------
+	SLIDER
+	------*/
+	function changeHeaderBg(curNumber){
+		setInterval(function(){
+			curNumber++
+
+		    if(curNumber > 3){
+		        curNumber = 1
+		    }
+
+		    $('#header').css('background-image',' url(./assets/img/header_' + curNumber + '.jpg)').fadeIn(1000)
+		    setTimeout(()=>{
+		    	$('#header').css('background-image',' url(./assets/img/header_' + curNumber + '.jpg)').fadeOut(1000)
+		    }, 3000)
+			
+
+	    }, 4000)
+	}
+
+	changeHeaderBg(0);
 })
