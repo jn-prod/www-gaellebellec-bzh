@@ -239,7 +239,7 @@ $(function(){
 		setInterval(function(){
 			curNumber++
 
-		    if(curNumber > 3){
+		    if(curNumber > 5){
 		        curNumber = 1
 		    }
 
