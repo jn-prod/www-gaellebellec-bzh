@@ -246,23 +246,22 @@ $(function(){
 	------*/
 	function changeHeaderBg(curNumber){
 		setInterval(function(){
+			var rootPath
+		    if(enVersion === false){
+		    	rootPath = '.'
+		    } else {
+		    	rootPath = '..'
+		    }			
 			curNumber++
 
 		    if(curNumber > 5){
 		        curNumber = 1
 		    }
 
-		    if(enVersion === false){
-			    $('#header').css('background-image',' url(./assets/img/header_' + curNumber + '.jpg)').fadeIn(1000)
-			    setTimeout(()=>{
-			    	$('#header').css('background-image',' url(./assets/img/header_' + curNumber + '.jpg)').fadeOut(0000)
-			    }, 2000)		    	
-		    } else {
-			    $('#header').css('background-image',' url(../assets/img/header_' + curNumber + '.jpg)').fadeIn(1000)
-			    setTimeout(()=>{
-			    	$('#header').css('background-image',' url(../assets/img/header_' + curNumber + '.jpg)').fadeOut(0000)
-			    }, 2000)			    	
-		    }
+		    $('#header').css('background-image',' url(' + rootPath + '/assets/img/header_' + curNumber + '.jpg)').fadeIn(1000)
+		    setTimeout(()=>{
+		    	$('#header').css('background-image',' url(' + rootPath + '/assets/img/header_' + curNumber + '.jpg)').fadeOut(0000)
+		    }, 2000)			    	
 	    }, 4000)
 	}
 
