@@ -173,6 +173,12 @@ START => BOOTSTRAP CUSTOM
   border-top: .05rem solid #e5e5e5;
 }
 
+.flag img {
+  height: 32px;
+  width: auto;
+  margin-top: 5px
+}
+
 #bio-titre{
   background: url(../img/liserets.png) repeat-x;
   color:#FFF;

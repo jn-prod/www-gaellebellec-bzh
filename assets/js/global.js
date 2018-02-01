@@ -3,6 +3,15 @@ $(function(){
 		events = [],
 		results = [];
 
+	var path = window.location.pathname.split('/'),
+		enVersion = false;
+
+	path.forEach((val)=>{
+		if(val === "en"){
+			enVersion = true
+		}
+	})
+
 	function eventConstructor (date, city, event){
 	  var event = 
 	  '<div class="row event">'+
@@ -243,12 +252,17 @@ $(function(){
 		        curNumber = 1
 		    }
 
-		    $('#header').css('background-image',' url(./assets/img/header_' + curNumber + '.jpg)').fadeIn(1000)
-		    setTimeout(()=>{
-		    	$('#header').css('background-image',' url(./assets/img/header_' + curNumber + '.jpg)').fadeOut(0000)
-		    }, 2000)
-			
-
+		    if(enVersion === false){
+			    $('#header').css('background-image',' url(./assets/img/header_' + curNumber + '.jpg)').fadeIn(1000)
+			    setTimeout(()=>{
+			    	$('#header').css('background-image',' url(./assets/img/header_' + curNumber + '.jpg)').fadeOut(0000)
+			    }, 2000)		    	
+		    } else {
+			    $('#header').css('background-image',' url(../assets/img/header_' + curNumber + '.jpg)').fadeIn(1000)
+			    setTimeout(()=>{
+			    	$('#header').css('background-image',' url(../assets/img/header_' + curNumber + '.jpg)').fadeOut(0000)
+			    }, 2000)			    	
+		    }
 	    }, 4000)
 	}
 
