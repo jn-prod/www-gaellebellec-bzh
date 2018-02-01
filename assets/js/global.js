@@ -245,8 +245,8 @@ $(function(){
 
 		    $('#header').css('background-image',' url(./assets/img/header_' + curNumber + '.jpg)').fadeIn(1000)
 		    setTimeout(()=>{
-		    	$('#header').css('background-image',' url(./assets/img/header_' + curNumber + '.jpg)').fadeOut(1000)
-		    }, 3000)
+		    	$('#header').css('background-image',' url(./assets/img/header_' + curNumber + '.jpg)').fadeOut(0000)
+		    }, 2000)
 			
 
 	    }, 4000)
