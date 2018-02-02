@@ -1,10 +1,29 @@
 $(function(){
 	var posts = [],
 		events = [],
-		results = [];
+		results = [],
+		postsApi, calendarApi, resultsApi;
 
 	var path = window.location.pathname.split('/'),
 		enVersion = false;
+
+	var apiUrl = 'https://sheets.googleapis.com/v4/spreadsheets/1kKnjdWTbLGFc-bl7VEYyrrO-xEk6ws5YeU41llRYZw4/values/',
+		apiKey = 'key=AIzaSyD1hD6OXLqkeWVizdMh2PYxF1ZyCa_jPo4'
+
+	var apis = {
+				posts: {
+					fr: apiUrl + 'posts!2:1000?' + apiKey,
+					en: apiUrl + 'posts_en!2:1000?' + apiKey
+					},
+				calendar:{
+					fr: apiUrl + 'calendarOutput!1:1000?' + apiKey,
+					en: apiUrl + 'calendarOutput_en!1:1000?' + apiKey
+					},
+				results:{
+					fr: apiUrl + 'resultsOutput!1:1000?' + apiKey,
+					en: apiUrl + 'resultsOutput_en!1:1000?' + apiKey
+					}
+				}
 
 	path.forEach((val)=>{
 		if(val === "en"){
@@ -53,12 +72,22 @@ $(function(){
       return result
 	}
 
+	if(enVersion === false){
+		postsApi = apis.posts.fr
+		calendarApi = apis.calendar.fr
+		resultsApi = apis.results.fr
+	} else {
+		postsApi = apis.posts.en
+		calendarApi = apis.calendar.en
+		resultsApi = apis.results.en
+	}
+
 	/*------
 	POSTS
 	------*/
 
 	/*Posts init*/
-	$.getJSON( "https://sheets.googleapis.com/v4/spreadsheets/1kKnjdWTbLGFc-bl7VEYyrrO-xEk6ws5YeU41llRYZw4/values/posts!2:1000?key=AIzaSyD1hD6OXLqkeWVizdMh2PYxF1ZyCa_jPo4", function( data ) {
+	$.getJSON(postsApi , function( data ) {
 		$.each(data.values, function(key, val){
 			posts.push(
 			  '<div class="row post">'+
@@ -110,7 +139,7 @@ $(function(){
 	------*/
 
 	/*Calendar init*/
-	$.getJSON( "https://sheets.googleapis.com/v4/spreadsheets/1kKnjdWTbLGFc-bl7VEYyrrO-xEk6ws5YeU41llRYZw4/values/calendarOutput!1:1000?key=AIzaSyD1hD6OXLqkeWVizdMh2PYxF1ZyCa_jPo4", function( data ) {
+	$.getJSON( calendarApi, function( data ) {
 		/* Date Init*/
 		var date = new Date(Date.now())
 
@@ -172,7 +201,7 @@ $(function(){
 	------*/
 
 	/*Results init*/
-	$.getJSON( "https://sheets.googleapis.com/v4/spreadsheets/1kKnjdWTbLGFc-bl7VEYyrrO-xEk6ws5YeU41llRYZw4/values/resultsOutput!1:1000?key=AIzaSyD1hD6OXLqkeWVizdMh2PYxF1ZyCa_jPo4", function( data ) {
+	$.getJSON( resultsApi, function( data ) {
 		$.each(data.values, function(key, val){
 			var result = {
 				date : this[0],
