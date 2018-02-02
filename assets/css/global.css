@@ -80,10 +80,21 @@ ul{
 }
 
 /* ------- HEADER PAGE-------*/
-#header{
+.bg1, .bg2{
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -100;
   background-size: cover;
-  height: 85vh;
+  height: 100vh;
   background-position: top-center;
+}
+
+#header{
+  height: 85vh;
 }
 #header h1 {
   font-weight: 400;

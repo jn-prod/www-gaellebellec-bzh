@@ -258,10 +258,14 @@ $(function(){
 		        curNumber = 1
 		    }
 
-		    $('#header').css('background-image',' url(' + rootPath + '/assets/img/header_' + curNumber + '.jpg)').fadeIn(1000)
-		    setTimeout(()=>{
-		    	$('#header').css('background-image',' url(' + rootPath + '/assets/img/header_' + curNumber + '.jpg)').fadeOut(0000)
-		    }, 2000)			    	
+		    prevNumber = curNumber -1
+		    if(prevNumber === 0 ){
+		    	prevNumber = 5
+		    }
+
+		    $('.bg1').css({'background-image': 'url(' + rootPath + '/assets/img/header_' + prevNumber + '.jpg)'})
+			$('.bg2').animate({opacity: 0}, 0).css({'background-image': 'url(' + rootPath + '/assets/img/header_' + curNumber + '.jpg)'}).animate({opacity: 1}, 2500);
+
 	    }, 4000)
 	}
 
