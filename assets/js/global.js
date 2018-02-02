@@ -83,6 +83,36 @@ $(function(){
 	}
 
 	/*------
+	SLIDER
+	------*/
+	function changeHeaderBg(curNumber){
+		setInterval(function(){
+			var rootPath
+		    if(enVersion === false){
+		    	rootPath = '.'
+		    } else {
+		    	rootPath = '..'
+		    }			
+			curNumber++
+
+		    if(curNumber > 5){
+		        curNumber = 1
+		    }
+
+		    prevNumber = curNumber -1
+		    if(prevNumber === 0 ){
+		    	prevNumber = 5
+		    }
+
+		    $('.bg1').css({'background-image': 'url(' + rootPath + '/assets/img/header_' + prevNumber + '.jpg)'})
+			$('.bg2').animate({opacity: 0}, 0).css({'background-image': 'url(' + rootPath + '/assets/img/header_' + curNumber + '.jpg)'}).animate({opacity: 1}, 2500);
+
+	    }, 4000)
+	}
+
+	changeHeaderBg(0);
+	
+	/*------
 	POSTS
 	------*/
 
@@ -269,34 +299,4 @@ $(function(){
 	$(document).on('click', '#close-newsletter', ()=>{
 		$('#newsletter-form').remove()
 	})
-
-	/*------
-	SLIDER
-	------*/
-	function changeHeaderBg(curNumber){
-		setInterval(function(){
-			var rootPath
-		    if(enVersion === false){
-		    	rootPath = '.'
-		    } else {
-		    	rootPath = '..'
-		    }			
-			curNumber++
-
-		    if(curNumber > 5){
-		        curNumber = 1
-		    }
-
-		    prevNumber = curNumber -1
-		    if(prevNumber === 0 ){
-		    	prevNumber = 5
-		    }
-
-		    $('.bg1').css({'background-image': 'url(' + rootPath + '/assets/img/header_' + prevNumber + '.jpg)'})
-			$('.bg2').animate({opacity: 0}, 0).css({'background-image': 'url(' + rootPath + '/assets/img/header_' + curNumber + '.jpg)'}).animate({opacity: 1}, 2500);
-
-	    }, 4000)
-	}
-
-	changeHeaderBg(0);
 })

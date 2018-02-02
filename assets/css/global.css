@@ -91,6 +91,7 @@ ul{
   background-size: cover;
   height: 100vh;
   background-position: top-center;
+  background-image: url(../img/header_5.jpg);
 }
 
 #header{
