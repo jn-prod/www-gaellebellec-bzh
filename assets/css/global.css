@@ -282,5 +282,9 @@ END <= BOOTSTRAP CUSTOM
   height: 50%;
   width: 90%;
   background: #ecf0f1;
-}
+  }
+  .flag img{
+    margin-top: 6px;
+    height: 14px;
+  }
 }
