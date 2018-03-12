@@ -138,6 +138,7 @@ $(function(){
 					'<div class="row hidde">'+
 		              '<div class="col-sm-12">'+
 		              	'<p>' + this[2] + '</p>'+
+		              	'<p> <a rel="nofollow" target="_blank" href="' + this[3] + '"> Suivre le lien</a></p>'+
 		              '</div>'+
 		            '</div>'+
 		          '</div>'+ 
