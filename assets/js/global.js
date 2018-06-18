@@ -95,13 +95,13 @@ $(function(){
 		    }			
 			curNumber++
 
-		    if(curNumber > 5){
+		    if(curNumber > 4){
 		        curNumber = 1
 		    }
 
 		    prevNumber = curNumber -1
 		    if(prevNumber === 0 ){
-		    	prevNumber = 5
+		    	prevNumber = 4
 		    }
 
 		    $('.bg1').css({'background-image': 'url(' + rootPath + '/assets/img/header_' + prevNumber + '.jpg)'})
