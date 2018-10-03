@@ -88,29 +88,40 @@ $(function(){
 	function changeHeaderBg(curNumber){
 		setInterval(function(){
 			var rootPath
-		    if(enVersion === false){
-		    	rootPath = '.'
-		    } else {
-		    	rootPath = '..'
-		    }			
+			var max = 5
+	    if(enVersion === false){
+	    	rootPath = '.'
+	    } else {
+	    	rootPath = '..'
+	    }	
+
 			curNumber++
 
-		    if(curNumber > 4){
-		        curNumber = 1
-		    }
+	    if(curNumber > max){
+	        curNumber = 1
+	    }
 
-		    prevNumber = curNumber -1
-		    if(prevNumber === 0 ){
-		    	prevNumber = 4
-		    }
+	    var prevNumber = curNumber - 1
+	    var nextNumber = curNumber + 1
+	    if(prevNumber === 0 ){
+	    	prevNumber = max
+	    }
 
-		    $('.bg1').css({'background-image': 'url(' + rootPath + '/assets/img/header_' + prevNumber + '.jpg)'})
-			$('.bg2').animate({opacity: 0}, 0).css({'background-image': 'url(' + rootPath + '/assets/img/header_' + curNumber + '.jpg)'}).animate({opacity: 1}, 2500);
+	    if(nextNumber > max ){
+	    	nextNumber = 1
+	    }
 
-	    }, 4000)
+		 //    $('.bg1').css({'background-image': 'url(' + rootPath + '/assets/img/header_' + prevNumber + '.jpg)'})
+			// $('.bg2').animate({opacity: 0}, 0).css({'background-image': 'url(' + rootPath + '/assets/img/header_' + curNumber + '.jpg)'}).animate({opacity: 1}, 2500);
+			$('#header-bg-2').removeClass('bg' + curNumber).addClass('bg' + nextNumber).animate({opacity: 0}, 0).animate({opacity: 1}, 2500)
+			$('#header-bg-1').removeClass('bg' + prevNumber).addClass('bg' + curNumber)
+			
+			// $('.bg' + curNumber).animate({opacity: 0}, 0).css({'background-image': 'url(' + rootPath + '/assets/img/header_' + curNumber + '.jpg)'}).animate({opacity: 1}, 2500);
+
+	  }, 4000)
 	}
-
-	changeHeaderBg(0);
+	
+	changeHeaderBg(5);
 	
 	/*------
 	POSTS

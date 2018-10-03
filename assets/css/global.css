@@ -80,7 +80,7 @@ ul{
 }
 
 /* ------- HEADER PAGE-------*/
-.bg1, .bg2{
+.bg {
   position: absolute;
   display: block;
   top: 0;
@@ -91,6 +91,25 @@ ul{
   background-size: cover;
   height: 100vh;
   background-position: top-center;
+}
+
+.bg1 {
+  background-image: url(../img/header_1.jpg);
+}
+
+.bg2 {
+  background-image: url(../img/header_2.jpg);
+}
+
+.bg3 {
+  background-image: url(../img/header_3.jpg);
+}
+
+.bg4 {
+  background-image: url(../img/header_4.jpg);
+}
+
+.bg5 {
   background-image: url(../img/header_5.jpg);
 }
 
@@ -99,30 +118,6 @@ ul{
 }
 #header h1 {
   font-weight: 400;
-}
-
-.header-img-1{
-  background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.3), 
-      rgba(0, 0, 0, 0.3)
-    ) , url(../img/header_1.jpg), no-repeat;
-}
-
-.header-img-2{
-  background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.3), 
-      rgba(0, 0, 0, 0.3)
-    ) , url(../img/header_2.jpg), no-repeat;
-}
-
-.header-img-3{
-  background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.3), 
-      rgba(0, 0, 0, 0.3)
-    ) , url(../img/header_3.jpg), no-repeat;
 }
 
 #calendrier {
