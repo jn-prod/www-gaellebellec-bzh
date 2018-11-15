@@ -186,8 +186,9 @@ START => BOOTSTRAP CUSTOM
   margin-top: 5px
 }
 
-#bio-titre{
+.liseret{
   background: url(../img/liserets.png) repeat-x;
+  background-size: contain;
   color:#FFF;
   text-shadow: 1px #333;
 }
@@ -232,10 +233,6 @@ START => BOOTSTRAP CUSTOM
   .header {
     padding-bottom: 2rem;
     padding-top: 2rem;
-  }
-
-  .header nav {
-    font-size: 1.5em;
   }
 
   /* Remove the bottom border on the jumbotron for visual effect */
