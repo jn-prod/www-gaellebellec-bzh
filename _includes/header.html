@@ -1,0 +1,46 @@
+<div class="container header">
+  <div class="row">
+    <div class="col-1 liseret">
+    </div>
+    <div class="col-10">
+      <!-- MENU 
+      Actu, Resultats, calendrier, Bio ,sponsors, Facebook, youtube
+      -->
+      <nav>
+        <ul class="nav nav-pills text-md-center nav-justified ">
+          <li class="nav-item my-auto">
+            <a class="nav-link text-white" href="#actus">{{ site.data.header.news[page.version] }}</a>
+          </li>
+          <li class="nav-item my-auto">
+            <a class="nav-link text-white" href="#calendrier">{{ site.data.header.calendar[page.version] }}</a>
+          </li>                
+          <li class="nav-item my-auto">
+            <a class="nav-link text-white" href="#resultats">{{ site.data.header.results[page.version] }}</a>
+          </li>
+          <li class="nav-item my-auto">
+            <a class="nav-link text-white" href="#bio">{{ site.data.header.bio[page.version] }}</a>
+          </li>
+          <li class="nav-item my-auto">
+            <a class="nav-link text-white" href="#sponsors">{{ site.data.header.sponsors[page.version] }}</a>
+          </li>                
+          <li class="nav-item float-right my-auto">
+            <a class="nav-link text-white" target="_blank" href="https://www.youtube.com/results?search_query=gael+le+bellec"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+          </li>  
+          <li class="nav-item float-right my-auto">
+            <a class="nav-link text-white" target="_blank" href="https://www.facebook.com/gael.lebellec.568"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+          </li>
+          <li class="nav-item float-right my-auto">
+            <a class="nav-link text-white" target="_blank" href="https://www.instagram.com/gaellbllec/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </li>
+          <li class="nav-item float-right my-auto">
+            <a class="nav-link text-white flag" href="{{ site.url }}{{ site.data.header.other_version[page.version] }}" >
+              <img src="{{ site.url }}/assets/img/{{site.data.header.flag[page.version]}}" alt="english version">
+            </a>
+          </li>                               
+        </ul>
+      </nav>                
+    </div>
+    <div class="col-1 liseret">
+    </div>
+  </div>      
+</div>

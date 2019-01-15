@@ -1,0 +1,195 @@
+---
+layout: default
+---
+
+<!-- CTA NEWSLETTER -->          
+<section>
+  <div id="header" class="container-fluid d-flex">
+    <div id="header-bg-1" class="bg bg1"></div>
+    <div id="header-bg-2" class="bg"></div>
+    <div class="jumbotron">
+      <h1 class="display-3 text-uppercase text-white">{{ site.title }}</h1>
+      <h2 class="text-capitalize spacer-lg-top text-white">{{ page.description }}</h2>
+      <a id="" class="btn btn-lg btn-danger spacer-lg-top text-white newsletter">{{ page.cta }}</a>
+    </div>
+  </div>            
+</section>
+
+<!-- ACTUS 
+  1 actu + CTA
+-->
+<section id="actus" class=" bg-light">
+  <div class="container py-5">
+    <div class="row ">
+      <div class="col-12">
+       <h2 class="spacer-lg-top">{{ site.data.header.news[page.version] }}</h2>                  
+      </div>
+    </div>
+    <div id="posts"></div>
+    <div class="row text-center spacer">
+      <div class="col-sm-12 spacer-lg-bottom">
+        <button id="more-posts" class="btn btn-default">{{ site.data.header.see_more[page.version] }}</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDRIER 
+  Prochain event
+-->
+<section id="calendrier">
+  <div class="container py-5">
+    <div class="row ">
+      <div class="col-12">
+        <h2 class="spacer-lg-top">{{ site.data.header.calendar[page.version] }}</h2>                  
+      </div>
+    </div>
+    <div id="events"></div>
+    <div class="row text-center">
+      <div class="col-sm-12 spacer-lg-bottom">
+        <button id="more-events" class="btn btn-default">{{ site.data.header.see_more[page.version] }}</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTATS 
+  Dernier Résultat
+-->
+<section id="resultats" class="bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12">
+       <h2 class="spacer-lg-top">{{ site.data.header.results[page.version] }}</h2>                  
+      </div>
+    </div>
+    <div id="results"></div>
+    <div class="row text-center">
+      <div class="col-sm-12 spacer-lg-bottom">
+        <button id="more-results" class="btn btn-default">{{ site.data.header.see_more[page.version] }}</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARRAINAGE
+  GRID 1x5
+-->
+<section id="parrainage" class="spacer-lg-top text-center">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="spacer-lg-bottom">{{ site.data.header.mentoring[page.version] }}</h2>                  
+      </div>
+    </div>              
+    <div class="row">
+      {% for mentor in site.data.mentoring %}
+        <div class="col-sm-6 col-md-2 mx-auto">
+          <img src="{{site.url}}{{ mentor.img }}" alt="{{ mentor.name }}">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS
+  Grid 1x5
+-->
+<section id="sponsors" class="spacer-lg-top  text-center bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="spacer-lg-top spacer-lg-bottom">{{ site.data.header.sponsors[page.version] }}</h2>                
+      </div>
+    </div>              
+    <div class="row pb-5">
+
+      {% for sponsor in site.data.sponsors%}
+
+        <div class="col-sm-6 col-md-2 spacer-lg-bottom mx-auto my-2">
+
+          <img src="{{ site.url }}{{ sponsor.img }}" alt="{{ sponsor.name }}">
+
+        </div>
+
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+<!-- BIO 
+  1 actu + CTA
+-->
+<section id="bio" class="">
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+        <h2 id="" class="spacer-lg-top liseret"><i class="fa fa-user" aria-hidden="true"></i> {{ site.title }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3 class="spacer-lg-top spacer-lg-bottom text-center">{{ site.data.header.team[page.version] }}</h3>                  
+      </div>
+    </div>              
+    <div class="row">
+      {% for team in site.data.teams%}
+        <div class="col-sm-6 col-md-4 mx-auto spacer-lg-bottom">
+          <img src="{{ site.url }}{{ team.img }}" alt="{{ team.name }}">
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row text-center spacer">
+      <div class="col-xs-12 col-sm-4 spacer-lg-bottom">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="spacer-sm-bottom">PROFIL</h3> 
+            <ul>
+              <li><strong>{{ site.data.profil[page.version].name }} :</strong> {{ site.title }}</li>
+              <li><strong>{{ site.data.profil[page.version].nationality }} :</strong> Franco - Brittanique</li>
+              <li><strong>{{ site.data.profil[page.version].date_of_birth }} :</strong> 06/04/1988</li>
+              <li><strong>{{ site.data.profil[page.version].size }} :</strong> 1m82</li>
+              <li><strong>{{ site.data.profil[page.version].weight }} :</strong> 70Kg</li>
+            </ul>                      
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-12">
+            <h3 class="spacer-sm-bottom spacer-lg-top text-uppercase">{{ site.data.profil[page.version].awards }}</h3>
+          </div>
+        </div>
+        <div class="row text-center spacer">
+          <div class="col-12">
+            <h4 class="text-center spacer-xs-top">DUATHLON</h4>
+            <ul>
+              {% for result in site.data[page.version].results %}
+                <li>- {{ result }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>   
+      <div class="col-xs-12 col-sm-8 mb-5">
+        <h3 class="text-xs-center text-left">BIO</h3>
+
+        {% for bio in site.data.profil[page.version].bio%}
+
+          <p class="text-justify">{{bio}}</p>
+
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER 
+  CTA
+-->          
+<section class="container-fluid d-flex bg-light">
+  <div class="jumbotron">
+    <h3 class="spacer-lg-top">{{ page.cta_description }}</h3>
+    <a id="" class="btn btn-lg btn-danger spacer-lg-top text-white newsletter">{{ page.cta }}</a>
+  </div>          
+</section>

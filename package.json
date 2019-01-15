@@ -1,0 +1,26 @@
+{
+  "name": "gael-lebellec",
+  "version": "1.0.0",
+  "description": "Gael le bellec website",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
+    "app:server": "bundle exec jekyll serve --watch",
+    "dev:server": "npm run app:server",
+    "build:osx": "NODE_ENV=production webpack --config webpack.config.js",
+    "build:win": "set NODE_ENV=production&& webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jn-prod/GaelLeBellec.git"
+  },
+  "keywords": [
+    "jekyll"
+  ],
+  "author": "nicolas jouanno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jn-prod/GaelLeBellec/issues"
+  },
+  "homepage": "https://github.com/jn-prod/GaelLeBellec#readme"
+}

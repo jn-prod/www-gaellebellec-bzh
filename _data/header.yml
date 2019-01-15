@@ -1,0 +1,30 @@
+news:
+  fr: "Actus"
+  en: "News"
+calendar:
+  fr: "Calendrier"
+  en: "Calendar"
+results:
+  fr: "Resultats"
+  en: "Results"
+bio:
+  fr: "Bio"
+  en: "Bio"
+sponsors:
+  fr: "Sponsors"
+  en: "Sponsors"
+mentoring:
+  fr: "Parrainage"
+  en: "Mentoring"
+team:
+  fr: "Clubs"
+  en: "Teams"
+flag:
+  fr: "en.png"
+  en: "fr.png"
+other_version:
+  fr: "/en/index.html"
+  en: "/index.html"
+see_more:
+  fr: "Voir +"
+  en: "See +"
