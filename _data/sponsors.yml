@@ -8,6 +8,10 @@
   img: "/assets/img/g856.png"
 - name: "go sport"
   img: "/assets/img/g1181.png"
+- name: "APESUD Cycling"
+  img: '/assets/img/g1402.png'
+- name: "prologo"
+  img: '/assets/img/g1545.png'
 - name: "Spirulib"
   img: "/assets/img/g787.png"
 - name: "Colnago"
