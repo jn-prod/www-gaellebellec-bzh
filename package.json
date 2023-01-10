@@ -1,26 +1,32 @@
 {
-  "name": "gael-lebellec",
-  "version": "1.0.0",
-  "description": "Gael le bellec website",
-  "main": "index.js",
+  "name": "gaellebellec-bzh",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "pretest": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
-    "app:server": "bundle exec jekyll serve --watch",
-    "dev:server": "npm run app:server",
-    "build:osx": "NODE_ENV=production webpack --config webpack.config.js",
-    "build:win": "set NODE_ENV=production&& webpack --config webpack.config.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "npm run lint:es && npm run lint:prettier",
+    "lint:fix": "npm run lint:es:fix && npm run lint:prettier:fix",
+    "lint:es": "next lint",
+    "lint:es:fix": "next lint --fix",
+    "lint:prettier": "prettier --check **/*.{ts,js,json}",
+    "lint:prettier:fix": "prettier --write **/*.{ts,js,json}"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jn-prod/GaelLeBellec.git"
+  "dependencies": {
+    "bootstrap": "4",
+    "jquery": "1",
+    "next": "12.3.1",
+    "popper.js": "1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
-  "keywords": [
-    "jekyll"
-  ],
-  "author": "nicolas jouanno",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jn-prod/GaelLeBellec/issues"
-  },
-  "homepage": "https://github.com/jn-prod/GaelLeBellec#readme"
+  "devDependencies": {
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "typescript": "4.8.4",
+    "eslint": "8.27.0",
+    "eslint-config-next": "12.3.1"
+  }
 }

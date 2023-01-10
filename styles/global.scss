@@ -1,4 +1,7 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
 @import url('https://fonts.googleapis.com/css?family=Oswald:200,400');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200');
 
 /* ---------------------------
 START => THEME 
@@ -94,23 +97,23 @@ ul{
 }
 
 .bg1 {
-  background-image: url(../img/header_1.jpg);
+  background-image: url(/img/header_1.jpg);
 }
 
 .bg2 {
-  background-image: url(../img/header_2.jpg);
+  background-image: url(/img/header_2.jpg);
 }
 
 .bg3 {
-  background-image: url(../img/header_3.jpg);
+  background-image: url(/img/header_3.jpg);
 }
 
 .bg4 {
-  background-image: url(../img/header_4.jpg);
+  background-image: url(/img/header_4.jpg);
 }
 
 .bg5 {
-  background-image: url(../img/header_5.jpg);
+  background-image: url(/img/header_5.jpg);
 }
 
 #header{
@@ -187,7 +190,7 @@ START => BOOTSTRAP CUSTOM
 }
 
 .liseret{
-  background: url(../img/liserets.png) repeat-x;
+  background: url(/img/liserets.png) repeat-x;
   background-size: contain;
   color:#FFF;
   text-shadow: 1px #333;
