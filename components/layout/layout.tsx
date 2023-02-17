@@ -3,19 +3,11 @@ import Head from 'next/head';
 import Script from 'next/script';
 import Link from 'next/link';
 import React from 'react';
-import { useRouter } from 'next/router';
 import site from '../../site.conf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
-interface ILayout {
-  children: React.ReactNode;
-}
-
-export default function Layout({ children }: ILayout) {
-  const router = useRouter();
-  const { locale, defaultLocale } = router;
-  const version = locale || defaultLocale;
+export default function Layout({ children, version }: { children: React.ReactNode; version: 'fr' | 'en' }) {
   return (
     <>
       <Head>
@@ -108,7 +100,7 @@ export default function Layout({ children }: ILayout) {
                       </a>
                     </li>
                     <li className="nav-item float-right my-auto">
-                      <Link href="/" locale={version === defaultLocale ? 'en' : defaultLocale}>
+                      <Link href={version === 'fr' ? '/en' : '/'}>
                         <a className="nav-link text-white flag">
                           <img
                             src={`/img/${site.header.flag[version as keyof typeof site.header.flag]}`}
