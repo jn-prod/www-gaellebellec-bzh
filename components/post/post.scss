@@ -1,0 +1,10 @@
+.post {
+  &__summary {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  &__load-more {
+    white-space: nowrap;
+  }
+}

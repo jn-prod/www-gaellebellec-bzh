@@ -1,0 +1,30 @@
+$height: 90vh;
+
+.carousel {
+  position: relative;
+  height: $height;
+  &__image {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $height;
+    width: 100%;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: cover;
+    transition: ease-in background-image 2.5s;
+    @for $i from 1 through 5 {
+      &.carousel__image--#{$i} {
+        background-image: url('/img/header_#{$i}.jpg');
+      }
+    }
+    & > * {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 60%;
+      text-align: center;
+    }
+  }
+}
