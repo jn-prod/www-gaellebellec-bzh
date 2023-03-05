@@ -1,4 +1,5 @@
 const site = {
+  baseUrl: 'https://www.gael-lebellec.bzh',
   title: 'Gaël Le Bellec',
   description: '',
   home: {
@@ -51,10 +52,6 @@ const site = {
     flag: {
       fr: 'en.png',
       en: 'fr.png',
-    },
-    other_version: {
-      fr: '/en/index.html',
-      en: '/index.html',
     },
     see_more: {
       fr: 'Voir +',
