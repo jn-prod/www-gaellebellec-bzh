@@ -27,8 +27,8 @@ dependencies:
   '@fortawesome/free-brands-svg-icons': 5.15.4
   '@fortawesome/free-solid-svg-icons': 5.15.4
   '@fortawesome/react-fontawesome': 0.2.0_itb73sutiv5dicgxanxbjij2uu
-  bootstrap: 4.6.2_nb7xlqme3dfq4rdvdh33y6svjq
-  jquery: 3.6.3
+  bootstrap: 4.6.2_v43dgvb72xgm2jgaq7rwaicqhe
+  jquery: 3.7.1
   next: 12.3.1_wiv434v7erz4aedd5whhdwmpv4
   popper.js: 1.16.1
   react: 18.2.0
@@ -513,13 +513,13 @@ packages:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
 
-  /bootstrap/4.6.2_nb7xlqme3dfq4rdvdh33y6svjq:
+  /bootstrap/4.6.2_v43dgvb72xgm2jgaq7rwaicqhe:
     resolution: {integrity: sha512-51Bbp/Uxr9aTuy6ca/8FbFloBUJZLHwnhTcnjIeRn2suQWsWzcuJhGjKDB5eppVte/8oCdOL3VuwxvZDUggwGQ==}
     peerDependencies:
       jquery: 1.9.1 - 3
       popper.js: ^1.16.1
     dependencies:
-      jquery: 3.6.3
+      jquery: 3.7.1
       popper.js: 1.16.1
     dev: false
 
@@ -572,7 +572,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
 
   /color-convert/2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
@@ -1125,8 +1125,8 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
-  /fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  /fsevents/2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -1474,8 +1474,8 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /jquery/3.6.3:
-    resolution: {integrity: sha512-bZ5Sy3YzKo9Fyc8wH2iIQK4JImJ6R0GWI9kL1/k7Z91ZBNgkRXE6U0JfHIizZbort8ZunhSI3jw9I6253ahKfg==}
+  /jquery/3.7.1:
+    resolution: {integrity: sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==}
     dev: false
 
   /js-sdsl/4.3.0:
