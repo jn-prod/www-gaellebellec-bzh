@@ -1,0 +1,121 @@
+{%- assign s = site.data.site -%}
+{%- assign lang = page.lang -%}
+{%- assign ui = s.ui[lang] -%}
+{%- assign h = s.home[lang] -%}
+{%- assign p = s.profil[lang] -%}
+<section class="hero" data-carousel data-pause="{{ ui.pause }}" data-play="{{ ui.play }}">
+<div class="hero__content">
+<h1 class="hero__title">{{ s.title }}</h1>
+<p class="hero__subtitle">{{ h.description }}</p>
+<button class="button button--danger button--lg" type="button" data-newsletter-open>{{ h.cta }}</button>
+</div>
+<button class="hero__toggle" type="button" data-carousel-toggle hidden>{{ ui.pause }}</button>
+</section>
+
+<dialog class="newsletter" data-newsletter aria-label="{{ h.cta }}">
+<button class="button button--ghost newsletter__close" type="button" data-newsletter-close aria-label="{{ ui.close }}">X</button>
+<p>{{ h.cta_description }}</p>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSe2TveY73jexT4zlbmeJxS9P1T-Xt2nj90DJ-mfm4G3WQddng/formResponse" target="_blank" method="post">
+<p><label for="newsletter-email">{{ ui.email }}</label><br>
+<input id="newsletter-email" type="email" name="emailAddress" autocomplete="email" placeholder="{{ ui.email_placeholder }}" required></p>
+<p><label for="newsletter-firstname">{{ ui.firstname }}</label><br>
+<input id="newsletter-firstname" type="text" name="entry.1462355575" autocomplete="given-name"></p>
+<input type="hidden" name="fvv" value="1">
+<input type="hidden" name="draftResponse" value='[null,null,"6858085896552653950"]'>
+<input type="hidden" name="pageHistory" value="0">
+<input type="hidden" name="fbzx" value="6858085896552653950">
+<p class="newsletter__privacy">{{ ui.privacy }} <a href="/mentions-legales">{{ ui.legal | downcase }}</a>.</p>
+<button class="button button--danger" type="submit">{{ ui.submit }}</button>
+</form>
+</dialog>
+
+<section class="section section--light" id="actus">
+<div class="container">
+<h2>{{ s.header.news[lang] }}</h2>
+<div data-posts data-read-more="{{ ui.read_more }}" data-follow-link="{{ ui.follow_link }}" aria-live="polite"></div>
+<p class="center"><button class="button button--secondary" type="button" data-more="posts" hidden>{{ s.header.see_more[lang] }}</button></p>
+</div>
+</section>
+
+<section class="section" id="calendrier">
+<div class="container">
+<h2>{{ s.header.calendar[lang] }}</h2>
+<div data-events aria-live="polite"><h3 class="accent center">{{ ui.no_event }}</h3></div>
+</div>
+</section>
+
+<section class="section section--light" id="resultats">
+<div class="container">
+<h2>{{ s.header.results[lang] }}</h2>
+<div data-results aria-live="polite"></div>
+<p class="center"><button class="button button--secondary" type="button" data-more="results" hidden>{{ s.header.see_more[lang] }}</button></p>
+</div>
+</section>
+
+<section class="section" id="parrainage">
+<div class="container">
+<h2>{{ s.header.mentoring[lang] }}</h2>
+<ul class="logos">
+{%- for item in s.mentoring %}
+<li><img src="{{ item.img }}" alt="{{ item.name }}" loading="lazy"></li>
+{%- endfor %}
+</ul>
+</div>
+</section>
+
+<section class="section section--light" id="sponsors">
+<div class="container">
+<h2>{{ s.header.sponsors[lang] }}</h2>
+<ul class="logos">
+{%- for item in s.sponsors %}
+<li><img src="{{ item.img }}" alt="{{ item.name }}" loading="lazy"></li>
+{%- endfor %}
+</ul>
+</div>
+</section>
+
+<section class="container bio" id="bio">
+<h2 class="liseret bio__title"><svg class="icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg>{{ s.title }}</h2>
+<h3 class="center bio__teams">{{ s.header.team[lang] }}</h3>
+<ul class="logos logos--teams">
+{%- for item in s.teams %}
+<li><img src="{{ item.img }}" alt="{{ item.name }}" loading="lazy"></li>
+{%- endfor %}
+</ul>
+<div class="bio__columns">
+<div class="bio__profile">
+<h3>PROFIL</h3>
+<ul>
+<li><strong>{{ p.name }} :</strong> {{ s.title }}</li>
+<li><strong>{{ p.nationality }} :</strong> Franco - Brittanique</li>
+<li><strong>{{ p.date_of_birth }} :</strong> 06/04/1988</li>
+<li><strong>{{ p.size }} :</strong> 1m82</li>
+<li><strong>{{ p.weight }} :</strong> 70Kg</li>
+</ul>
+<h3>{{ p.awards | upcase }}</h3>
+<h4>DUATHLON</h4>
+<ul>
+{%- for result in p.results %}
+<li>- {{ result }}</li>
+{%- endfor %}
+</ul>
+</div>
+<div class="bio__text">
+<h3>BIO</h3>
+{%- for paragraph in p.bio %}
+<p>{{ paragraph }}</p>
+{%- endfor %}
+</div>
+</div>
+</section>
+
+<section class="section section--light center" id="newsletter">
+<div class="container">
+<h2 class="newsletter__call">{{ h.cta_description }}</h2>
+<button class="button button--danger button--lg" type="button" data-newsletter-open>{{ h.cta }}</button>
+</div>
+</section>
+
+<template data-icon="calendar"><svg class="icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm436-44v-36c0-26.5-21.5-48-48-48h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v36c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12z"/></svg></template>
+<template data-icon="place"><svg class="icon" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg></template>
+<template data-icon="rank"><svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z"/></svg></template>
