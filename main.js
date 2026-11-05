@@ -1,14 +1,43 @@
 // Gaël Le Bellec : carrousel avec pause, newsletter, et données lues dans Google Sheets.
-const SHEET_ID = "1kKnjdWTbLGFc-bl7VEYyrrO-xEk6ws5YeU41llRYZw4";
-const KEY = "AIzaSyD1hD6OXLqkeWVizdMh2PYxF1ZyCa_jPo4";
+const SHEET = "https://docs.google.com/spreadsheets/d/1kKnjdWTbLGFc-bl7VEYyrrO-xEk6ws5YeU41llRYZw4/gviz/tq?tqx=out:csv";
 const suffix = document.documentElement.lang === "en" ? "_en" : "";
 
-const read = async (range) => {
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${range}?key=${KEY}`;
-  const res = await fetch(url);
+// Lecture CSV : champs entre guillemets, virgules et retours à la ligne inclus.
+const parseCsv = (text) => {
+  const rows = [];
+  let row = [];
+  let field = "";
+  let quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (quoted) {
+      if (c === '"' && text[i + 1] === '"') {
+        field += '"';
+        i++;
+      } else if (c === '"') quoted = false;
+      else field += c;
+    } else if (c === '"') quoted = true;
+    else if (c === ",") {
+      row.push(field);
+      field = "";
+    } else if (c === "\n") {
+      row.push(field);
+      rows.push(row);
+      row = [];
+      field = "";
+    } else if (c !== "\r") field += c;
+  }
+  if (field || row.length) {
+    row.push(field);
+    rows.push(row);
+  }
+  return rows;
+};
+
+const read = async (sheet, firstRow) => {
+  const res = await fetch(`${SHEET}&sheet=${sheet}&range=${firstRow}:1000`);
   if (!res.ok) return [];
-  const { values = [] } = await res.json();
-  return values;
+  return parseCsv(await res.text()).filter((row) => row.some(Boolean));
 };
 
 const el = (tag, className, text) => {
@@ -128,9 +157,9 @@ async function sheets() {
   const posts = document.querySelector("[data-posts]");
   if (!posts) return;
   const [news, calendar, results] = await Promise.all([
-    read(`posts${suffix}!2:1000`),
-    read(`calendarOutput${suffix}!1:1000`),
-    read(`resultsOutput${suffix}!1:1000`),
+    read(`posts${suffix}`, 2),
+    read(`calendarOutput${suffix}`, 1),
+    read(`resultsOutput${suffix}`, 1),
   ]);
   firstThenAll(posts, document.querySelector('[data-more="posts"]'), news.reverse(), post(posts), true);
   const upcoming = calendar.filter(([date]) => parseDate(date) > new Date()).reverse();
