@@ -55,7 +55,6 @@ a:hover { text-decoration: none; }
 .newsletter::backdrop { background: rgba(0, 0, 0, .5); }
 .newsletter__close { position: absolute; top: .5rem; right: .5rem; }
 .newsletter input[type="email"], .newsletter input[type="text"] { width: 100%; min-height: 44px; padding: .375rem .75rem; border: 1px solid #6c757d; border-radius: .25rem; font: inherit; }
-.newsletter__privacy { font-size: .85rem; }
 .newsletter__call { font-size: 1.2em; font-weight: 500; }
 
 .section { padding: 6rem 0; }
